@@ -16,12 +16,12 @@ def load_config():
 def get_sound_type():
     """Get the current sound type setting"""
     config = load_config()
-    return config.get('sound_type', 'airplane')
+    return config['sound_type']
 
 def get_sound_description():
     """Get the sound description"""
     config = load_config()
-    return config.get('sound_description', 'Airplane cabin ambient sound')
+    return config['sound_description']
 
 if __name__ == '__main__':
     config = load_config()
