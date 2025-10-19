@@ -1,0 +1,10 @@
+{
+  "sound_type": "airplane",
+  "sound_description": "Airplane cabin ambient sound for better focus",
+  "volume": 0.7,
+  "features": {
+    "white_noise": true,
+    "ambient_type": "airplane_cabin",
+    "previous_version": "tv_static"
+  }
+}
