@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专注飞机 - 专为难以专注的人设计</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Booking Screen -->
+        <div class="booking-screen" id="bookingScreen">
+            <div class="header">
+                <h1>✈️ 专注飞机</h1>
+                <p class="subtitle">登机即刻开始专注之旅</p>
+            </div>
+
+            <div class="booking-form">
+                <div class="form-group">
+                    <label for="destination">选择目的地</label>
+                    <select id="destination" class="input-field">
+                        <option value="">请选择目的地...</option>
+                        <option value="15">东京 Tokyo - 15分钟</option>
+                        <option value="25">首尔 Seoul - 25分钟</option>
+                        <option value="30">新加坡 Singapore - 30分钟</option>
+                        <option value="45">曼谷 Bangkok - 45分钟</option>
+                        <option value="60">悉尼 Sydney - 60分钟</option>
+                        <option value="90">洛杉矶 Los Angeles - 90分钟</option>
+                        <option value="120">纽约 New York - 120分钟</option>
+                        <option value="180">伦敦 London - 180分钟</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="passengerName">乘客姓名</label>
+                    <input type="text" id="passengerName" class="input-field" placeholder="输入您的姓名">
+                </div>
+
+                <button id="bookButton" class="btn-primary" disabled>预订航班</button>
+            </div>
+
+            <div class="footer-text">
+                <p>💺 为您提供宁静的学习环境</p>
+            </div>
+        </div>
+
+        <!-- Flight Screen -->
+        <div class="flight-screen hidden" id="flightScreen">
+            <div class="flight-info">
+                <div class="status-badge">飞行中</div>
+                <h2 class="destination-name" id="flightDestination">东京</h2>
+                <p class="passenger-info" id="passengerInfo">乘客：</p>
+            </div>
+
+            <div class="timer-display">
+                <div class="time-remaining" id="timeRemaining">00:00:00</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="arrival-text">预计到达时间</p>
+            </div>
+
+            <div class="controls">
+                <button id="pauseButton" class="btn-control">⏸ 暂停</button>
+                <button id="resumeButton" class="btn-control hidden">▶ 继续</button>
+                <button id="stopButton" class="btn-danger">🛬 结束航班</button>
+            </div>
+
+            <div class="volume-control">
+                <label for="volumeSlider">🔊 音量控制</label>
+                <input type="range" id="volumeSlider" min="0" max="100" value="70" class="slider">
+            </div>
+        </div>
+
+        <!-- Completion Screen -->
+        <div class="completion-screen hidden" id="completionScreen">
+            <div class="completion-content">
+                <div class="completion-icon">🎉</div>
+                <h2>航班已抵达！</h2>
+                <p class="completion-message" id="completionMessage">恭喜您完成了专注旅程</p>
+                <button id="newFlightButton" class="btn-primary">预订新航班</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
